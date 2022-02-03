@@ -39,17 +39,12 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	}
 	std::cout << "init success\n";
 
+	typedef TextureManager* TheTextureManager;
 
-	//new
-	SDL_Surface* pTempSurface = SDL_LoadBMP("assets/sangam.bmp");
-	m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer,pTempSurface);
-	SDL_FreeSurface(pTempSurface);
-	SDL_QueryTexture(m_pTexture, NULL, NULL, &m_sourceRectangle.w, &m_sourceRectangle.h);
-	m_destinationRectangle.x = m_sourceRectangle.x = 0;
-	m_destinationRectangle.y = m_sourceRectangle.y = 0;
-	m_destinationRectangle.w = m_sourceRectangle.w;
-	m_destinationRectangle.h = m_sourceRectangle.h=640;
-
+	//if (!TheTextureManager::Instance()->load("assets/sangam.bmp"), "sangamid", m_pRenderer) {
+	//return false;
+	//}//loads
+	//TheTextureManager::Instance()->draw("sangamid", 0, 0, 128, 82, m_pRenderer);//draws
 
 
 	// to load
@@ -63,8 +58,9 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 void Game::render()
 {
 	SDL_RenderClear(m_pRenderer); // clear the renderer to the draw color
-	SDL_SetRenderDrawColor(m_pRenderer, 0, 0, 0xFF, SDL_ALPHA_OPAQUE);
-	SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle,&m_destinationRectangle);
+	SDL_SetRenderDrawColor(m_pRenderer, 0, 0, 0xFF, SDL_ALPHA_OPAQUE);//puts background colour
+
+
 	SDL_RenderPresent(m_pRenderer); // draw to the screen
 }
 void Game::handleEvents()
@@ -83,6 +79,7 @@ void Game::handleEvents()
 	}
 }
 void Game::update() {
+	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 }
 void Game::clean()
 {

@@ -25,14 +25,13 @@ public:
 	SDL_Window* m_pWindow;
 	SDL_Renderer* m_pRenderer;
 
-	//int m_currentFrame;
+	int m_currentFrame;
 	//TextureManager m_textureManager;
-	//new
-	SDL_Texture* m_pTexture; // the new SDL_Texture variable
-	SDL_Rect m_sourceRectangle; // the first rectangle
-	SDL_Rect m_destinationRectangle; // another rectangle
-	//
+	
 	bool m_bRunning;
+
+
+
 
 };
 
