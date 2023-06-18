@@ -3,6 +3,10 @@
 
 #include <math.h>
 
+/*
+*	Vector2D.h is the header file for the Vector2D class.
+*/
+
 class Vector2D
 {
 public:

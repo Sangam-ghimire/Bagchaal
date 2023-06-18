@@ -4,6 +4,12 @@
 #include <iostream>
 #include"TextureManager.h"
 //#include"TextureManager.h"
+
+/*
+* Game.h is the header file for the Game class.
+*/
+*/
+
 #ifndef __Game__
 #define __Game__
 class Game

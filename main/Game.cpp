@@ -7,6 +7,10 @@
 
 Game* Game::s_pInstance = 0;
 
+/*
+* Game.cpp is the source file for the Game class.
+*/
+
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
 	// attempt to initialize SDL
@@ -62,6 +66,9 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	return true;
 }
 
+/*
+* render() is called once per frame.
+*/
 void Game::render()
 {
 	SDL_RenderClear(m_pRenderer);
@@ -71,6 +78,9 @@ void Game::render()
 	SDL_RenderPresent(m_pRenderer);
 }
 
+/*
+*	clean() is called when the game ends.
+*/
 void Game::clean()
 {
 	std::cout << "cleaning game\n";
@@ -79,6 +89,10 @@ void Game::clean()
 	TheInputHandler::Instance()->clean();
 	SDL_Quit();
 }
+
+/*
+*	handleEvents() is called to handle events such as key presses.
+*/
 
 void Game::handleEvents()
 {
@@ -90,6 +104,10 @@ void Game::handleEvents()
 	}
 	
 }
+
+/*
+*	update() is called once per frame.
+*/
 
 void Game::update()
 {

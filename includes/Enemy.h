@@ -3,6 +3,10 @@
 
 #include <string>
 
+/*
+*	Enemy.h is the header file for the Enemy class.
+*/
+
 #include "SDLGameObject.h"
 
 class Enemy : public SDLGameObject

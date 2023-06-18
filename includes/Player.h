@@ -5,6 +5,10 @@
 
 #include "SDLGameObject.h"
 
+/*
+*	Player.h is the header file for the Player class.
+*/
+
 class Player : public SDLGameObject
 {
 public:

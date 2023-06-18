@@ -1,6 +1,8 @@
 #ifndef __MenuState__
 #define __MenuState__
-
+/*
+* MenuState.h is the header file for the MenuState class, which is a child of the GameState class.
+*/
 #include <vector>
 #include<SDL_mixer.h>
 #include "GameState.h"

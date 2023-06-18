@@ -7,6 +7,10 @@
 #include "LoaderParams.h"
 #include "Vector2D.h"
 
+/*
+* SDLGameObject.h is the header file for the SDLGameObject class, which is a child of the GameObject class.
+*/
+
 class SDLGameObject : public GameObject
 {
 public:

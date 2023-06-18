@@ -3,6 +3,7 @@
 #include<SDL.h>
 #include"Game.h"
 
+
 bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* pRenderer) {
 	
 	SDL_Surface* pTempSurface = IMG_Load(fileName.c_str());
@@ -50,7 +51,7 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
 	srcRect.h = destRect.h = height;
 	destRect.x = x;
 	destRect.y = y;
-
+	
 	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }
 

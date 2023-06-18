@@ -10,6 +10,9 @@
 
 //extern int gameTurn;
 
+/*
+*	Board.cpp is the source file for the Board class, which is a singleton.
+*/
 
 Board* TheBoard::s_pInstance = 0;
 
@@ -23,10 +26,16 @@ void Board::createBoard() {
 	
 
 }
+
+/*
+* This function is used to filter the coordinates of the board.
+*/
 void Board::coordinate() {
 
 	TheBoard::Instance()->filtercoordinate();
 }
+
+
 void Board::filtercoordinate()
 {
 
@@ -198,6 +207,11 @@ void Board::filtercoordinate()
 	
 
 }
+
+/*
+* This function is used to filter the Y co-ordinate of the mouse
+*/
+
 int Board::filterX(int a)
 {
 
@@ -228,6 +242,11 @@ int Board::filterX(int a)
 		}
 
 }
+
+/*
+* This function is used to filter the X co-ordinate of the mouse
+*/
+
 int Board::filterY(int a)
 {
 	if (a >= (0) &&
@@ -257,10 +276,12 @@ int Board::filterY(int a)
 	}
 
 }
+
+/*
+* This function is used to render the board
+*/
+
 void Board::render()
 {
 	TheBoard::Instance()->createBoard();
-
-	
-
 }

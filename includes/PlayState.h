@@ -10,6 +10,10 @@
 #include "Vector2D.h"
 //#include "Board.h"
 
+/*
+* PlayState.h is the header file for the PlayState class, which is a child of the GameState class.
+*/
+
 class GameObject;
 class SDLGameObject;
 

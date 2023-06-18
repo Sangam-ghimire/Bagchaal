@@ -9,6 +9,10 @@
 #include "MenuButton.h"
 #include <SDL_mixer.h>
 
+/*
+* PauseState.h is the header file for the PauseState class, which is a child of the GameState class.
+*/
+
 class PauseState : public GameState
 {
 public:

@@ -1,6 +1,10 @@
 #ifndef __GameStateMachine__
 #define __GameStateMachine__
 
+/*
+* GameStateMachine.h is the header file for the GameStateMachine class.
+*/
+
 #include <vector>
 
 #include "GameState.h"

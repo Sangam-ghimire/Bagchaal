@@ -1,6 +1,10 @@
 #ifndef __GameState__
 #define __GameState__
 
+/*
+* GameState.h is the header file for the GameState class.
+*/
+
 #include <string>
 
 class GameState

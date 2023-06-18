@@ -1,6 +1,9 @@
 #ifndef __InputHandler__
 #define __InputHandler__
 
+/*
+* InputHandler.h is the header file for the InputHandler class.
+*/
 #include <vector>
 #include <utility>
 

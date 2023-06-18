@@ -1,6 +1,10 @@
 #ifndef __GameOverState__
 #define __GameOverState__
 
+/*
+* GameOverState.h is the header file for the GameOverState class.
+*/
+
 #include <vector>
 #include <string>
 #include<SDL_mixer.h>>

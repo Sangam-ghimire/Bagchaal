@@ -10,14 +10,26 @@
 
 //extern int gameTurn;
 
+/*
+*	Enemy.cpp is the source file for the Enemy class.
+*/
+
 Enemy::Enemy(const LoaderParams* pParams) : SDLGameObject(pParams) {
 	
 }
+
+/*
+* This function is used to draw the enemy.
+*/
 
 void Enemy::draw()
 {
 	SDLGameObject::draw();
 }
+
+/*
+* This function is used to update the enemy.
+*/
 
 void Enemy::update()
 {  
@@ -27,6 +39,10 @@ void Enemy::update()
 	
 }
 
+/*
+*	This function is used to handle the input of the enemy.
+*/
+
 void Enemy::handleInput() {
 
 	Vector2D* pMousePos = TheInputHandler::Instance()->getMousePosition();
@@ -34,12 +50,11 @@ void Enemy::handleInput() {
 	int x = TheBoard::Instance()->filterX(pMousePos->getX());
 	int y= TheBoard::Instance()->filterY(pMousePos->getY());
 
-	
-
 	m_position.setX(x);
 	m_position.setY(y);
 	
 }
+
 int* Enemy::handle() {
 	int  r[2];
 	Vector2D* pMousePos = TheInputHandler::Instance()->getMousePosition();
@@ -50,10 +65,8 @@ int* Enemy::handle() {
 	r[1] = y;
 
 	return r;
-
-
-
 }
-
-
+/*
+* This function is used to clean the enemy.
+*/
 void Enemy::clean() {}

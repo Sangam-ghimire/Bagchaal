@@ -10,6 +10,10 @@
 #include "LoaderParams.h"
 #include "MenuButton.h"
 #include<SDL_mixer.h>
+
+/*
+*	GameOverState.cpp is the source file for the GameOverState class.
+*/
 const std::string GameOverState::s_gameOverID = "GAMEOVER";
 
 void GameOverState::update()
@@ -25,6 +29,10 @@ void GameOverState::update()
 	std::cout << "Gamover update" << std::endl;
 }
 
+/*
+*	This function is used to render the game over state.
+*/
+
 void GameOverState::render()
 {
 	for (int i = 0; i < m_gameObjects.size(); i++)
@@ -33,6 +41,10 @@ void GameOverState::render()
 	}
 	std::cout << "Gamover render" << std::endl;
 }
+
+/*
+*	This function is used to exit the game over state.
+*/
 
 bool GameOverState::onEnter()
 {
@@ -52,9 +64,9 @@ bool GameOverState::onEnter()
 		return false;
 	}
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-	music = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/gameover.WAV");
+	music = Mix_LoadMUS("gameover.WAV");
 
-	chunk = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/gameover.WAV");
+	chunk = Mix_LoadWAV("gameover.WAV");
 	Mix_PlayMusic(music, -1);
 	GameObject* gameOverText = new AnimatedGraphic(new LoaderParams(00, 00, 1200, 1000, "gameovertext"), 10);
 	GameObject* button1 = new MenuButton(new LoaderParams(200, 200, 247, 100, "mainbutton"), s_gameOverToMain);
@@ -68,6 +80,10 @@ bool GameOverState::onEnter()
 	return true;
 }
 
+/*
+*	This function is used to exit the game over state.
+*/
+
 bool GameOverState::onExit()
 {
 	std::cout << "Gamover onExit" << std::endl;
@@ -80,6 +96,9 @@ bool GameOverState::onExit()
 
 	Mix_FreeMusic(music);
 	Mix_FreeChunk(chunk);
+	/*	
+	*	We are using the clearFromTextureMap function of the texture manager to clear the texture map.
+	*/
 	TheTextureManager::Instance()->clearFromTextureMap("gameovertext");
 	TheTextureManager::Instance()->clearFromTextureMap("mainbutton");
 	TheTextureManager::Instance()->clearFromTextureMap("restartbutton");
@@ -88,21 +107,34 @@ bool GameOverState::onExit()
 	return true;
 }
 
+/*
+*	This function is used to change the state from game over state to main menu state.
+*/
+
 void GameOverState::s_gameOverToMain()
 {
+/*
+*	We are using the changeState function of the state machine to change the state from game over state to main menu state.
+*/
 	TheGame::Instance()->getStateMachine()->changeState(new MenuState());
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-	Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/BUTTONCLICK.mp3");
-	Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/BUTTONCLICK.mp3");
+	Mix_Music* gmusic = Mix_LoadMUS("BUTTONCLICK.mp3");
+	Mix_Chunk* gsound = Mix_LoadWAV("BUTTONCLICK.mp3");
 	Mix_PlayMusic(gmusic, 0);
 }
+
+/*
+*	This function is used to change the state from game over state to play state.
+*/
 
 void GameOverState::s_restartPlay()
 {
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-	Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/BUTTONCLICK.mp3");
-	Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/BUTTONCLICK.mp3");
+	Mix_Music* gmusic = Mix_LoadMUS("BUTTONCLICK.mp3");
+	Mix_Chunk* gsound = Mix_LoadWAV("BUTTONCLICK.mp3");
 	Mix_PlayMusic(gmusic, 0);
-
+/*
+*	We are using the changeState function of the state machine to change the state from game over state to play state.
+*/
 	TheGame::Instance()->getStateMachine()->changeState(new PlayState());
 }

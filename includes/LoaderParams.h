@@ -1,5 +1,8 @@
 #ifndef __LoaderParams__
 #define __LoaderParams__
+/*
+* LoaderParams.h is the header file for the LoaderParams class.
+*/
 
 #include <string>
 

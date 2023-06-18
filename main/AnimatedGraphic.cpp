@@ -1,6 +1,10 @@
 #include "SDL.h"
 #include "AnimatedGraphic.h"
 
+/*
+* AnimatedGraphic.cpp is the source file for the AnimatedGraphic class, which is a child of the SDLGameObject class.
+*/
+
 AnimatedGraphic::AnimatedGraphic(const LoaderParams* pParams, int animSpeed) : SDLGameObject(pParams), m_animSpeed(animSpeed)
 {
 }

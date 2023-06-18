@@ -5,6 +5,10 @@
 #include "SDLGameObject.h"
 #include "LoaderParams.h"
 
+/*
+* AnimatedGraphic.h is the header file for the AnimatedGraphic class, which is a child of the SDLGameObject class.
+*/
+
 class AnimatedGraphic : public SDLGameObject
 {
 public:

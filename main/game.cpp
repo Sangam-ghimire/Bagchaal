@@ -3,6 +3,10 @@
 using namespace std;
 //#include"TextureManager.h"
 
+/*
+* Game.cpp is the implementation file for the Game class.
+*/
+
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
 	// attempt to initialize SDL
@@ -45,8 +49,6 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	//return false;
 	//}//loads
 	//TheTextureManager::Instance()->draw("sangamid", 0, 0, 128, 82, m_pRenderer);//draws
-
-
 	// to load
 
 	
@@ -55,6 +57,11 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
 
 }
+
+/*
+*	render() is the function used to render the game to the screen.
+*/
+
 void Game::render()
 {
 	SDL_RenderClear(m_pRenderer); // clear the renderer to the draw color
@@ -63,6 +70,11 @@ void Game::render()
 
 	SDL_RenderPresent(m_pRenderer); // draw to the screen
 }
+
+/*
+* handleEvents() is the function used to handle events in the game.
+*/
+
 void Game::handleEvents()
 {
 	SDL_Event event;
@@ -78,9 +90,17 @@ void Game::handleEvents()
 		}
 	}
 }
+
+/*
+*	update() is the function used to update the game.
+*/
 void Game::update() {
 	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 }
+
+/*
+*	clean() is the function used to clean up the game.
+*/
 void Game::clean()
 {
 	std::cout << "cleaning game\n";

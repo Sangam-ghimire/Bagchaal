@@ -1,5 +1,10 @@
 #pragma once
 
+/*
+* GameObject.h is the header file for the GameObject class.
+*/
+*/
+
 class Board {
 public:
 	static Board* s_pInstance;

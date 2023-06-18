@@ -7,7 +7,7 @@
 
 InputHandler* InputHandler::s_pInstance = 0;
 
-
+// This function is used to handle the mouse button down event.
 InputHandler::InputHandler() : m_keystates(0), m_mousePosition(new Vector2D(0, 0))
 {
 	for (int i = 0; i < 3; i++)

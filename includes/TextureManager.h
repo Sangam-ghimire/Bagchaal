@@ -2,6 +2,10 @@
 #include<iostream>
 #include<sdl.h>
 #include<map>
+/*
+*	GameObject.h is the header file for the GameObject class.
+*/
+
 
 class TextureManager {
 private:

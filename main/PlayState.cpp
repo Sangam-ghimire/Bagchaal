@@ -1,9 +1,6 @@
 
 /*
-
-This cpp file contains all the game logic 
-
-
+*This cpp file contains all the game logic 
 */
 
 
@@ -18,31 +15,27 @@ This cpp file contains all the game logic
 #include <cmath>
 #include "Game.h"
 
+//initializing static variables
 static int goatdead;
 static int indexOfGoat = 4;//starting goat object in the array of objects
 static int numberOfGoat = 24;//number of objects inside the game
 
-
 const std::string PlayState::s_playID = "PLAY";
 
-
-
-
+/*
+*This function is used to update the game state.
+*/
 void PlayState::update()
 {
-	
-
+	//if escape key is pressed, go to pause state
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE)) {
 		TheGame::Instance()->getStateMachine()->pushState(new PauseState());//go to pause state
 	}
 
-	
 	for (int i = 0; i < m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->update();//update each objects position
 	}
-
-	
 	
 	dynamiccasting();//change base class pointers into specific class objects
 	
@@ -68,7 +61,7 @@ void PlayState::update()
 		break;
 	}
 	
-	
+	//if Backspace key is pressed, go to game over state 
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_BACKSPACE))
 	{
 		TheGame::Instance()->getStateMachine()->pushState(new GameOverState());//change state manually
@@ -330,8 +323,8 @@ void PlayState::limitmoves(SDLGameObject* tiger)//Check Movement Of tiger
 			if (dontoverlap(x, y))//check whether it overlaps any other objects or not
 			{
 				Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-				Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/test.WAV");
-				Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/test.WAV");
+				Mix_Music* gmusic = Mix_LoadMUS("test.WAV");
+				Mix_Chunk* gsound = Mix_LoadWAV("test.WAV");
 				Mix_PlayMusic(gmusic, 0);
 				tiger->handleInput();//Calling objects Handle input
 				gameTurn++;
@@ -347,8 +340,8 @@ void PlayState::limitmoves(SDLGameObject* tiger)//Check Movement Of tiger
 				if (killer(midx, midy))//check whether goats get killed or not
 				{
 					Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-					Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/GOATKILL.WAV");
-					Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/GOATKILL.WAV");
+					Mix_Music* gmusic = Mix_LoadMUS("GOATKILL.WAV");
+					Mix_Chunk* gsound = Mix_LoadWAV("GOATKILL.WAV");
 					Mix_PlayMusic(gmusic, 0);
 					tiger->handleInput();
 					goatdead++;//incrementing the number of goad dead
@@ -380,8 +373,8 @@ void PlayState::limitmoves(SDLGameObject* tiger)//Check Movement Of tiger
 
 			if (dontoverlap(x, y)) {
 				Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-				Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/test.WAV");
-				Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/test.WAV");
+				Mix_Music* gmusic = Mix_LoadMUS("test.WAV");
+				Mix_Chunk* gsound = Mix_LoadWAV("test.WAV");
 				Mix_PlayMusic(gmusic, 0);
 				tiger->handleInput();
 				gameTurn++;
@@ -399,8 +392,8 @@ void PlayState::limitmoves(SDLGameObject* tiger)//Check Movement Of tiger
 				if (killer(midx, midy))
 				{
 					Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-					Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/GOATKILL.WAV");
-					Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/GOATKILL.WAV");
+					Mix_Music* gmusic = Mix_LoadMUS("GOATKILL.WAV");
+					Mix_Chunk* gsound = Mix_LoadWAV("GOATKILL.WAV");
 					Mix_PlayMusic(gmusic, 0);
 					tiger->handleInput();
 					goatdead++;
@@ -530,8 +523,8 @@ void PlayState::turnGoat() {
 
 	if (correct == numberOfGoat) {
 		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-		Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/GOATSOUND.mp3");
-		Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/GOATSOUND.mp3");
+		Mix_Music* gmusic = Mix_LoadMUS("GOATSOUND.mp3");
+		Mix_Chunk* gsound = Mix_LoadWAV("GOATSOUND.mp3");
 		Mix_PlayMusic(gmusic, 0);
 
 		m_SDLgameObjects[indexOfGoat-goatdead]->getPosition().setX(p);
@@ -782,8 +775,8 @@ void PlayState::limitmovesGoat(SDLGameObject* goat) {//so that goat doesnot move
 			if (dontoverlap(x, y))
 			{
 				Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-				Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/GOATSOUND.mp3");
-				Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/GOATSOUND.mp3");
+				Mix_Music* gmusic = Mix_LoadMUS("GOATSOUND.mp3");
+				Mix_Chunk* gsound = Mix_LoadWAV("GOATSOUND.mp3");
 				Mix_PlayMusic(gmusic, 0);
 				goat->handleInput();
 				goatWinWin();
@@ -804,8 +797,8 @@ void PlayState::limitmovesGoat(SDLGameObject* goat) {//so that goat doesnot move
 
 			if (dontoverlap(x, y)) {
 				Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 1, 1024);
-				Mix_Music* gmusic = Mix_LoadMUS("C:/users/shaswot paudel/Downloads/GOATSOUND.mp3");
-				Mix_Chunk* gsound = Mix_LoadWAV("C:/users/shaswot paudel/Downloads/GOATSOUND.mp3");
+				Mix_Music* gmusic = Mix_LoadMUS("GOATSOUND.mp3");
+				Mix_Chunk* gsound = Mix_LoadWAV("GOATSOUND.mp3");
 				Mix_PlayMusic(gmusic, 0);
 				goat->handleInput();
 				goatWinWin();

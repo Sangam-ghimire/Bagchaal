@@ -1,5 +1,8 @@
 #ifndef __MenuButton__
 #define __MenuButton__
+/*
+* MenuButton.h is the header file for the MenuButton class, which is a child of the SDLGameObject class.
+*/
 
 #include "LoaderParams.h"
 #include "SDLGameObject.h"
