@@ -15,6 +15,7 @@ Bagchaal is a traditional board game played in Nepal. This project is a digital 
 
 - Programming Language: C++
 - Game Library: SDL (Simple DirectMedia Layer) along with it's image and music handling packages
+  One can find all the resources needed to deal wiht SDL and parts at: "https://wiki.libsdl.org/SDL2/FrontPage"
 - Version Control: Git
 
 ## How to Run the Game
