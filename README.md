@@ -14,17 +14,17 @@ Bagchaal is a traditional board game played in Nepal. This project is a digital 
 ## Technologies Used
 
 - Programming Language: C++
-- Game Library: SDL (Simple DirectMedia Layer)
+- Game Library: SDL (Simple DirectMedia Layer) along with it's image and music handling packages
 - Version Control: Git
 
 ## How to Run the Game
 
-1. Ensure you have a C++ compiler and SDL library installed on your machine.
+1. Ensure you have a C++ compiler and SDL(image and music too) library installed on your machine.
 2. Clone this repository
 3. Navigate to the project directory
 4. Compile the source code
 5. Run the game
-6. 
+   
 ## Controls
 
 - Mouse: Use the mouse to select and move game pieces on the board.
@@ -35,7 +35,7 @@ Bagchaal is a traditional board game played in Nepal. This project is a digital 
 - Improved AI: Enhance the computer player's intelligence to provide a more challenging gameplay experience.
 - Network multiplayer: Implement an online multiplayer mode to allow users to play against each other remotely.
 - Game statistics: Track and display game statistics, such as the number of wins for each player.
-- Sound effects and music: Add audio elements to enhance the gaming experience.
+- Sound effects and music: Add further advance audio elements to enhance the gaming experience.
 
 ## Contributing
 
