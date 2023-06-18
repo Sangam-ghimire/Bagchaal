@@ -25,6 +25,22 @@ Bagchaal is a traditional board game played in Nepal. This project is a digital 
 3. Navigate to the project directory
 4. Compile the source code
 5. Run the game
+
+## Game Flow
+![Game Flow](https://github.com/Sangam-ghimire/Bagchaal/blob/master/assets/Bagchaal%20Gameflow.png)
+
+## Gamestate Flow
+![Gamestate Flow](https://github.com/Sangam-ghimire/Bagchaal/blob/master/assets/State_Flow.png)
+
+## Gamestate Machine Flow
+![Gamestate Machine Flow](https://github.com/Sangam-ghimire/Bagchaal/blob/master/assets/Game%20State%20Machine%20Flow.png)
+
+## Some Mid Game Snaps
+![Board](https://github.com/Sangam-ghimire/Bagchaal/blob/master/assets/Board.png)
+
+![GameOver Menu](https://github.com/Sangam-ghimire/Bagchaal/blob/master/assets/Gameover%20menu.png)
+
+
    
 ## Controls
 
