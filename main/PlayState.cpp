@@ -298,10 +298,8 @@ bool PlayState::onExit()
 	return true;
 }
 
-void PlayState::handleState(){
-	
+void PlayState::handleState(){	
 }
-
 
 void PlayState::limitmoves(SDLGameObject* tiger)//Check Movement Of tiger
 {
@@ -530,7 +528,6 @@ void PlayState::turnGoat() {
 		m_SDLgameObjects[indexOfGoat-goatdead]->getPosition().setX(p);
 		m_SDLgameObjects[indexOfGoat-goatdead]->getPosition().setY(q);
 
-		
 		indexOfGoat++;
 		if (b == 4) {
 			a++;
@@ -542,10 +539,8 @@ void PlayState::turnGoat() {
 		else {
 			b++;
 		}
-		
-		
-		correct = 0;
 
+		correct = 0;
 		gameTurn++;
 	}	
 	goatWinWin();
