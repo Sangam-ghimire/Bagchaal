@@ -11,8 +11,7 @@ void PauseState::s_pauseToMain()
 	Mix_Music* gmusic = Mix_LoadMUS("assets/BUTTONCLICK.mp3");
 	Mix_Chunk* gsound = Mix_LoadWAV("assets/BUTTONCLICK.mp3");
 	Mix_PlayMusic(gmusic, 0);
-	TheGame::Instance()->getStateMachine()->changeState(new
-MenuState());
+	TheGame::Instance()->getStateMachine()->changeState(new MenuState());
 }
 //	This function is used to change the state from pause state to play state.
 void PauseState::s_resumePlay()
