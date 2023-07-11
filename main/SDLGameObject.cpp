@@ -3,8 +3,7 @@
 #include "Game.h"
 
 SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams), m_position(pParams->getX(), pParams->getY()),
-m_velocity(0, 0), m_acceleration(0, 0)
-{
+m_velocity(0, 0), m_acceleration(0, 0) {
 	m_width = pParams->getWidth();
 	m_height = pParams->getHeight();
 	m_textureID = pParams->getTextureID();
@@ -26,7 +25,6 @@ void SDLGameObject::draw()
 			m_width, m_height, m_currentRow, m_currentFrame, TheGame::Instance()->getRenderer());
 	}
 }
-
 void SDLGameObject::update()
 {
 	m_position += m_velocity;
