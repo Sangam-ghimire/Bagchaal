@@ -11,6 +11,25 @@ Bagchaal is a traditional board game played in Nepal. This project is a digital 
 - Turn-based gameplay: The game follows the turn-based gameplay of Bagchaal, allowing each player to make moves alternately.
 - Win condition: The game detects and declares a winner when a player successfully captures all of their opponent's game pieces.
 
+## Motivation behind developing it
+- Cultural preservation: This type of Baghchal has been a long lived game in our society and represents, preserves and promotes       a long lived cultural heritage.
+- Entertainment and recreation: Baghchal provides enjoyable leisure and friendly competition.
+- Educational value: Baghchal teaches strategic thinking and problem-solving skills.
+- Community building: Baghchal fosters a sense of community and social interaction.
+- Economic opportunities: Baghchal can stimulate attract foreigners and help generate revenue through gaming tourism.
+- Personal fulfillment and creativity:It has been an integral parts of my childhood and developing Baghchal allows for expression of creativity and passion for gaming.
+
+## Learnings
+-    Mastering SDL basics: Setting up the environment, handling events, and managing the game loop.
+-    Graphics and rendering: Creating visuals for the game board, pieces, and animations.
+-    Input handling: Implementing user interactions with mouse or keyboard inputs.
+-    Game logic: Developing rules, player turns, movements, capturing, and game outcomes.
+-    Sound and audio: Adding sound effects and music using SDL's audio features.
+-    User interface and menus: Designing user-friendly interfaces for menus and options.
+-    Testing and debugging: Ensuring the game functions correctly and resolving issues.
+-    Optimization and performance: Helped to learn a great bit on how to approach improving efficiency and resource management.
+-    Collaboration and teamwork: The gaming community is huge and so is developing games. Reaching out and connecting to them help      me grow and learn things quickly.
+
 ## Technologies Used
 
 - Programming Language: C++
