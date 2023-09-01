@@ -4,7 +4,7 @@ Bagchaal is a traditional board game played in Nepal. This project is a digital 
 
 ## Features
 
-- Play against the computer: Users can choose to play against the computer as a single player.
+- Play against the computer: Users can choose to play against the computer as a single player(under development phase).
 - Two-player mode: Users can play against another player on the same device.
 - Interactive UI: The game provides a user-friendly interface with graphical representations of the board and game pieces using SDL.
 - Game rules: The project includes the rules of Bagchaal to help users understand the gameplay.
